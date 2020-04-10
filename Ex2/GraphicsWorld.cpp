@@ -23,7 +23,21 @@ void GraphicsWorld::run()
     cout << "Distance between m and n: " << distance << endl;
     cout << "Distance between m and n calculated with a static method: " << static_distance << endl;
     cout << "The number of Point objects constructed are: " << m.counter() << endl;
-    
+
+    cout << "\nTesting Functions in class Shape:" << endl;
+    char shape1Name[] = "SHAPE1";
+    Shape shape1(10, 5, shape1Name);
+    shape1.display();
+    cout << "\nTestingn shape getOrigin method:" << endl;
+    shape1.getOrigin().display();
+
+    char shape2Name[] = "SHAPE2";
+    Shape shape2(8, 3, shape2Name);
+    cout << "Distance between shape 1 and shape 2: " << shape2.distance(shape1) << endl;
+    cout << "Static distance between shape 1 and shape 2: " << Shape::distance(shape1, shape2) << endl;
+    cout << "Moving shape 1 one unit to the left and one unit up:" << endl;
+    shape1.move(-1, 1);
+    shape1.display();
     // cout << "\nTesting Functions in class Square:" << endl;
     // Square s(5, 7, 12, "SQUARE -S");
     // s.display();

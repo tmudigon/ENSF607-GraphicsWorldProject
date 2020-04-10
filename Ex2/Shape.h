@@ -1,18 +1,17 @@
 #ifndef SHAPE_H
 #define SHAPE_H
-#include <cstddef>
 #include "Point.h"
 
 class Shape
 {
 public:
-    Shape(double x, double y, char *shapeName); // must dynamically allocate memory for shapeName
-    ~Shape();                             //destructor
-    Shape(const Shape &source);           //copy constructor
-    Shape &operator=(const Shape &rhs);   //asignment operator                             //Destroys memory allocation for shapeName
+    Shape(double x, double y, char *name); // must dynamically allocate memory for shapeName
+    virtual ~Shape();                                   //destructor
+    Shape(const Shape &source);                 //copy constructor
+    Shape &operator=(const Shape &rhs);         //asignment operator                             //Destroys memory allocation for shapeName
     Point getOrigin() const;
     char *getName() const;
-    void display() const;
+    virtual void display() const;
     double distance(Shape &other) const;
     static double distance(Shape &theShape, Shape &other);
     void move(double dx, double dy);
@@ -21,6 +20,8 @@ public:
 private:
     Point origin;
     char *shapeName;
+
+    int getSize(char *name) const;
 };
 
 #endif
