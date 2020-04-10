@@ -5,13 +5,13 @@
 class Point
 {
 public:
-    Point(double x, double y);
+    Point(double x_coordinate, double y_coordinate);
     void display() const;
     double getX() const;
     double getY() const;
     void setX(double value);
     void setY(double value);
-    double counter() const;
+    int counter() const;
     double distance(Point &otherPoint) const;
     static double distance(Point &p1, Point &p2);
 

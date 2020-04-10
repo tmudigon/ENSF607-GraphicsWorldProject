@@ -10,15 +10,20 @@ using namespace std;
 void GraphicsWorld::run()
 {
     // //=================================== PART 1 ====================================
-    // cout << "\nThis program has been written by: student name(s).";
-    // cout << "\nSubmitted at: 11:00 pm, February 3 , 2008\n";
-    // cout << "\nTesting Functions in class Point:" << endl;
-    // Point m(6, 8);
-    // Point n(6, 8);
-    // n.setX(9);
-    // m.display();
-    // n.display();
-
+    cout << "\nThis program has been written by: Thanmayee Mudigonda and Sourabh Mokhasi.";
+    cout << "\nSubmitted on April 20, 2020.\n";
+    cout << "\nTesting Functions in class Point:" << endl;
+    Point m(6, 8);
+    Point n(6, 8);
+    n.setX(9);
+    m.display();
+    n.display();
+    double distance = m.distance(n);
+    double static_distance = Point::distance(m, n);
+    cout << "Distance between m and n: " << distance << endl;
+    cout << "Distance between m and n calculated with a static method: " << static_distance << endl;
+    cout << "The number of Point objects constructed are: " << m.counter() << endl;
+    
     // cout << "\nTesting Functions in class Square:" << endl;
     // Square s(5, 7, 12, "SQUARE -S");
     // s.display();
