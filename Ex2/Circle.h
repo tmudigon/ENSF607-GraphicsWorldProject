@@ -17,6 +17,7 @@ public:
     //Need law of big 3?
 private:
     double radius;
+    const double pi = 3.14159265358979323846;
 };
 
 #endif

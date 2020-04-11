@@ -61,11 +61,12 @@ void GraphicsWorld::run()
     // Rectangle rec2(3, 4, 11, 7, "RECTANGLE rec2");
     // rec2 = a;
     // rec2.display();
-    // cout << "\nTesting Functions in class Circle:" << endl;
-    // Circle c(3, 5, 9, "CIRCLE C");
-    // c.display();
-    // cout << "the area of " << c.getName() << " is: " << c.area() << endl;
-    // cout << "the perimeter of " << c.getName() << " is: " << c.perimeter() << endl;
-    // d = a.distance(c);
-    // cout << "\nThe distance between rectangle a and circle c is: " << d;
+    cout << "\nTesting Functions in class Circle:" << endl;
+    char cName [] = "CIRCLE C";
+    Circle c(3, 5, 9, cName);
+    c.display();
+    cout << "the area of " << c.getName() << " is: " << c.area() << endl;
+    cout << "the perimeter of " << c.getName() << " is: " << c.perimeter() << endl;
+    double d = shape1.distance(c);
+    cout << "\nThe distance between rectangle a and circle c is: " << d;
 }

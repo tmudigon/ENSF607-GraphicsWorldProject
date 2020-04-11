@@ -6,7 +6,7 @@ class Shape
 {
 public:
     Shape(double x, double y, char *name); // must dynamically allocate memory for shapeName
-    virtual ~Shape();                                   //destructor
+    ~Shape();                                   //destructor
     Shape(const Shape &source);                 //copy constructor
     Shape &operator=(const Shape &rhs);         //asignment operator                             //Destroys memory allocation for shapeName
     Point getOrigin() const;
@@ -17,7 +17,7 @@ public:
     void move(double dx, double dy);
     //DONT FORGET THE LAW OF BIG 3 - copy constructor, assignment operator and destructor all must be present if one is present
 
-private:
+protected:
     Point origin;
     char *shapeName;
 
