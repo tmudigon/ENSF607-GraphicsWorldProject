@@ -42,6 +42,7 @@ void Point::setY(double value)
     this->y = value;
 }
 
+//Returns the number of objects of class Point
 int Point::counter() const
 {
     int num_obj = id - 1000;
