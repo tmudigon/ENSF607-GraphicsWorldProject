@@ -80,37 +80,44 @@ void GraphicsWorld::run()
     cout << "\nThe distance between rectangle a and circle c is: " << d;
 
     // =================================== PART 2 =============================================
-    CornerCut rc(6, 5, 10, 12, 9, "CornerCut rc");
+    char cornerCutName[] = "CornerCut rc";
+    CornerCut rc(6, 5, 10, 12, 9, cornerCutName);
     rc.display();
     cout << "the area of " << rc.getName() << " is: " << rc.area();
     cout << "the perimeter of " << rc.getName() << " is: " << rc.perimeter();
     d = rc.distance(c);
     cout << "\nThe distance between rc and c is: " << d;
+    
     // Using array of Shape pointers:
-    // Shape *sh[4];
-    // sh[0] = &s;
-    // sh[1] = &a;
-    // sh[2] = &c;
-    // sh[3] = &rc;
-    // sh[0]->display();
-    // cout << "\nthe area of " << sh[0]->getName() << "is: " << sh[0]->area();
-    // cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter();
-    // sh[1]->display();
-    // cout << "\nthe area of " << sh[1]->getName() << "is: " << sh[1]->area();
-    // cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[1]->perimeter();
-    // sh[2]->display();
-    // cout << "\nthe area of " << sh[2]->getName() << "is: " << sh[2]->area();
-    // cout << "\nthe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter();
-    // sh[3]->display();
-    // cout << "\nthe area of " << sh[3]->getName() << "is: " << sh[3]->area();
-    // cout << "\nthe perimeter of " << sh[3]->getName() << " is: " << sh[3]->perimeter();
-    // cout << "\nTesting copy constructor in class CornerCut:" << endl;
-    // CornerCut cc = rc;
-    // cc.display();
-    // cout << "\nTesting assignment operator in class CornerCut:" << endl;
-    // CornerCut cc2(2, 5, 100, 12, 9, "CornerCut cc2");
-    // cc2.display();
-    // cc2 = cc;
-    // cc2.display();
+    cout << "PART 2" << endl;
+    cout << endl;
+    Shape *sh[4];
+    sh[0] = &s;
+    sh[1] = &a;
+    sh[2] = &c;
+    sh[3] = &rc;
+    sh[0]->display();
+    cout << "\nthe area of " << sh[0]->getName() << "is: " << sh[0]->area();
+    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter();
+    sh[1]->display();
+    cout << "\nthe area of " << sh[1]->getName() << "is: " << sh[1]->area();
+    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[1]->perimeter();
+    sh[2]->display();
+    cout << "\nthe area of " << sh[2]->getName() << "is: " << sh[2]->area();
+    cout << "\nthe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter();
+    sh[3]->display();
+    cout << "\nthe area of " << sh[3]->getName() << "is: " << sh[3]->area();
+    cout << "\nthe perimeter of " << sh[3]->getName() << " is: " << sh[3]->perimeter();
+    cout << "\nTesting copy constructor in class CornerCut:" << endl;
+    CornerCut cc = rc;
+    cc.display();
+    cout << "\nTesting assignment operator in class CornerCut:" << endl;
+    char cornerCutName2[] = "CornerCut rc2";
+    CornerCut cc2(2, 5, 100, 12, 3, cornerCutName2);
+    cc2.display();
+    cc2 = cc;
+    cc2.display();
+    cout << "CC Radius: " << cc.getRadius() << endl;
+    cout << "CC2 Radius: " << cc2.getRadius() << endl;
     // ADD ADDITIONAL CODE TO TEST MORE FEATRUES, IF NEEDED
 }

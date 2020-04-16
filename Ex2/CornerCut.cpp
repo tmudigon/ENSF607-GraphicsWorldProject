@@ -1,5 +1,9 @@
 #include <iostream>
 #include "CornerCut.h"
+#include <cstddef>
+#include <stdlib.h>
+#include <assert.h>
+#include <string.h>
 #include "cmath"
 using namespace std;
 
@@ -31,4 +35,21 @@ double CornerCut::perimeter() const{
 void CornerCut::display(){
     cout << "CornerCut Name: " << endl;
     Shape::display();
+}
+
+CornerCut &CornerCut::operator=(const CornerCut &rhs){
+    if(this == &rhs){
+        return *this;
+    }
+    else{
+        delete[] this->shapeName;
+        int size = getSize(rhs.getName());
+        this->shapeName = new char[size + 1];
+        assert(this->shapeName != 0);
+        strcpy(this->shapeName, rhs.getName());
+        this->origin = rhs.getOrigin();
+        setSideA(rhs.getSideA());
+        setSideB(rhs.getSideA());
+        setRadius(rhs.getRadius());
+    }
 }
