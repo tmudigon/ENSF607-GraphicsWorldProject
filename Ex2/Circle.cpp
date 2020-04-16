@@ -6,6 +6,7 @@
 #include <math.h>
 #include "Circle.h"
 #include "Shape.h"
+
 using namespace std;
 
 Circle::Circle(double x, double y, double radius, char *shapeName):Shape(x,y,shapeName){
@@ -33,4 +34,27 @@ void Circle::setRadius(double value){
 void Circle::display(){
     cout << "Circle Name: ";
     Shape::display();
+}
+
+
+Circle &Circle::operator=(const Circle &rhs)
+{
+    // cout << "Assignment operator called!" << endl;
+    if (this == &rhs)
+    {
+        return *this;
+    }
+    else
+    {
+        delete[] this->shapeName;
+        int size = getSize(rhs.getName());
+        this->shapeName = new char[size + 1];
+        assert(this->shapeName != 0);
+        strcpy(this->shapeName, rhs.getName());
+
+        this->origin = rhs.getOrigin();
+        setRadius(rhs.getRadius());
+    }
+
+    return *this;
 }

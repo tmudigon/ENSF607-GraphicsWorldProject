@@ -46,7 +46,18 @@ void GraphicsWorld::run()
     s.display();
     cout << "the area of " << s.getName() << " is: " << s.area() << "\n";
     cout << "the perimeter of " << s.getName() << " is: " << s.perimeter() << "\n";
+    cout << "\n Testing copy constructor for Shape: " << endl;
+    Square s2(s);
 
+    cout <<"\ns sideA:" << s.getSideA();
+    cout <<"\ns2 sideA:" << s2.getSideA();
+    char square3Name[] = "Square 3";
+    Square s3(10,12,17,square3Name);
+    cout << "\n Testing Assignment operator for Shape: " << endl;
+    s3 = s2;
+    cout << "s3 sideA: " << s3.getSideA();
+
+    
     cout << "\nTesting Functions in class Rectangle:" << endl;
     char recAName[] = "RECTANGLE A";
     Rectangle a(5, 7, 12, 15, recAName);

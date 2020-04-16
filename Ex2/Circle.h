@@ -13,7 +13,7 @@ public:
     double getRadius() const;
     void setRadius(double value);
     void display();
-
+    Circle &operator=(const Circle &rhs);  
 private:
     double radius;
     const double pi = 3.14159265358979323846;

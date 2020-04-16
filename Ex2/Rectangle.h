@@ -11,6 +11,7 @@ public:
     double perimeter() const;
     double getSideB() const;
     void setSideB(double value);
+    Rectangle &operator=(const Rectangle &rhs);
     void display();
     
 private:
