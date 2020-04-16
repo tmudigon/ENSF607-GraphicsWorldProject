@@ -5,8 +5,9 @@ using namespace std;
 
 CornerCut::CornerCut(double x,double y,double width, double length, double radius, char *name):Circle(x,y,radius,name),Rectangle(x,y,length,width,name), Shape(x,y,name)
 {
-    if(checkRadiusLessThanWidth){
+    if(checkRadiusLessThanWidth()){
         cout << "Error! Radius must be less than or equal to width" << endl;
+        return;
     }
 }
 

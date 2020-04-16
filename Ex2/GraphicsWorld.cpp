@@ -80,13 +80,13 @@ void GraphicsWorld::run()
     cout << "\nThe distance between rectangle a and circle c is: " << d;
 
     // =================================== PART 2 =============================================
-    // CornerCut rc(6, 5, 10, 12, 9, "CornerCut rc");
-    // rc.display();
-    // cout << "the area of " << rc.getName() << " is: " << rc.area();
-    // cout << "the perimeter of " << rc.getName() << " is: " << rc.perimeter();
-    // d = rc.distance(c);
-    // cout << "\nThe distance between rc and c is: " << d;
-    // // Using array of Shape pointers:
+    CornerCut rc(6, 5, 10, 12, 9, "CornerCut rc");
+    rc.display();
+    cout << "the area of " << rc.getName() << " is: " << rc.area();
+    cout << "the perimeter of " << rc.getName() << " is: " << rc.perimeter();
+    d = rc.distance(c);
+    cout << "\nThe distance between rc and c is: " << d;
+    // Using array of Shape pointers:
     // Shape *sh[4];
     // sh[0] = &s;
     // sh[1] = &a;

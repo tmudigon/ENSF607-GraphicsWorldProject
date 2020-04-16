@@ -11,7 +11,7 @@ public:
     CornerCut(double x, double y, double width, double length, double radius, char *shapeName);
     double area() const;
     double perimeter() const;
-    double getName() const;
+    // char* getName() const;
     void display();
 
 private:
