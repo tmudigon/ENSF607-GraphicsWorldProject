@@ -6,10 +6,6 @@
 #include "Shape.h"
 using namespace std;
 
-/**
- * HOW DO I DEAL WITH THE VIRTUAL FUNCITONS HERE???? DO I HAVE TO GET RID OF THE IMPLEMENTATION?
- */
-
 Shape::Shape(double x, double y, char *name) : origin(x, y)
 {
     //Need to dynamically allocate memory space here for shapeName
@@ -17,7 +13,7 @@ Shape::Shape(double x, double y, char *name) : origin(x, y)
     this->shapeName = new char[size + 1];
     assert(this->shapeName != 0);
     strcpy(this->shapeName, name);
-    cout << "Shape constructor called!" << endl;
+    // cout << "Shape constructor called!" << endl;
 }
 
 Shape::~Shape()
@@ -28,7 +24,7 @@ Shape::~Shape()
 
 Shape::Shape(const Shape &source) : origin(source.origin.getX(), source.origin.getY())
 {
-    cout << "Copy constructor called!" << endl;
+    // cout << "Copy constructor called!" << endl;
     //Copy the name
     int size = getSize(source.getName());
     this->shapeName = new char[size + 1];
@@ -41,7 +37,7 @@ Shape::Shape(const Shape &source) : origin(source.origin.getX(), source.origin.g
 
 Shape &Shape::operator=(const Shape &rhs)
 {
-    cout << "Assignment operator called!" << endl;
+    // cout << "Assignment operator called!" << endl;
     if (this == &rhs)
     {
         return *this;
@@ -72,7 +68,6 @@ char *Shape::getName() const
 
 void Shape::display() const
 {
-    cout << "Shape Name: ";
     char *ptr = shapeName;
     while (*ptr != '\0')
     {

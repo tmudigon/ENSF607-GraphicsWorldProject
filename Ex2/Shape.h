@@ -15,7 +15,6 @@ public:
     double distance(Shape &other) const;
     static double distance(Shape &theShape, Shape &other);
     void move(double dx, double dy);
-    //DONT FORGET THE LAW OF BIG 3 - copy constructor, assignment operator and destructor all must be present if one is present
 
 protected:
     Point origin;

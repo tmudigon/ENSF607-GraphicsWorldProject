@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Rectangle.h"
+using namespace std;
 
 Rectangle::Rectangle(double x,double y,double sideA,double sideB, char *shapeName):Square(x,y,sideA,shapeName){
     this->sideB = sideB;
@@ -22,5 +23,6 @@ void Rectangle::setSideB(double value){
 }
 
 void Rectangle::display(){
-    display(); //Calls the display method of Square
+    cout << "Rectangle Name: ";
+    Shape::display();
 }

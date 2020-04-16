@@ -32,12 +32,5 @@ void Circle::setRadius(double value){
 
 void Circle::display(){
     cout << "Circle Name: ";
-    char *ptr = shapeName;
-    while (*ptr != '\0')
-    {
-        cout << *ptr;
-        ptr++;
-    }
-    cout << endl;
-    origin.display();
+    Shape::display();
 }

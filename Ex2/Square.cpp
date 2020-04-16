@@ -23,5 +23,6 @@ void Square::setSideA(double value){
 }
 
 void Square::display(){
+    cout << "Square Name: ";
     Shape::display();
 }
