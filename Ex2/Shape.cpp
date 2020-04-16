@@ -26,20 +26,39 @@ Shape::~Shape()
     delete[] shapeName; // We are only deleting the pointer.
 }
 
-// Shape::Shape(const Shape &source) : origin(source.origin.getX(), source.origin.getY())
-// {
-//     int size = getSize(shapeName);
-//     char* sourceName = new char [size+1];
-//     assert(sourceName != 0);
-//     strcpy(sourceName, this->shapeName);
+Shape::Shape(const Shape &source) : origin(source.origin.getX(), source.origin.getY())
+{
+    cout << "Copy constructor called!" << endl;
+    //Copy the name
+    int size = getSize(source.getName());
+    this->shapeName = new char[size + 1];
+    assert(this->shapeName != 0);
+    strcpy(this->shapeName, source.getName());
 
-//     source.setName(this->shapeName);
-// }
+    //copy the origin
+    source.getOrigin() = this->origin;
+}
 
-// Shape &Shape::operator=(const Shape &rhs)
-// {
-//     //FINISH
-// }
+Shape &Shape::operator=(const Shape &rhs)
+{
+    cout << "Assignment operator called!" << endl;
+    if (this == &rhs)
+    {
+        return *this;
+    }
+    else
+    {
+        delete[] this->shapeName;
+        int size = getSize(rhs.getName());
+        this->shapeName = new char[size + 1];
+        assert(this->shapeName != 0);
+        strcpy(this->shapeName, rhs.getName());
+
+        this->origin = rhs.getOrigin();
+    }
+
+    return *this;
+}
 
 Point Shape::getOrigin() const
 {
