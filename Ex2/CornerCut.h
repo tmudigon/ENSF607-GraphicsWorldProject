@@ -3,6 +3,7 @@
 #include <cstddef>
 #include "Rectangle.h"
 #include "Circle.h"
+#include "Shape.h"
 
 class CornerCut : public Rectangle, public Circle
 {

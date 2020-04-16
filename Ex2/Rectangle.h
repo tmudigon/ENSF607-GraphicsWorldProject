@@ -12,8 +12,7 @@ public:
     double getSideB() const;
     void setSideB(double value);
     void display();
-
-    //Need law of big 3?
+    
 private:
     double sideB;
 };
