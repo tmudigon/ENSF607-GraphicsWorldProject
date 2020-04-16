@@ -4,7 +4,7 @@
 #include "Shape.h"
 
 
-class Circle : public Shape
+class Circle : virtual public Shape
 {
 public:
     Circle(double x, double y, double radius, char *shapeName);

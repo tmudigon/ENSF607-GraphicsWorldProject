@@ -4,7 +4,7 @@
 #include "Rectangle.h"
 #include "Circle.h"
 
-class CornerCut : virtual public Rectangle, virtual public Circle
+class CornerCut : public Rectangle, public Circle
 {
 public:
     CornerCut(double x, double y, double width, double length, double radius, char *shapeName);
