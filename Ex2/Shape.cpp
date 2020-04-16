@@ -22,7 +22,8 @@ Shape::Shape(double x, double y, char *name) : origin(x, y)
 
 Shape::~Shape()
 {
-    delete[] shapeName;
+    //Need to call the destructor for Point?
+    delete[] shapeName; // We are only deleting the pointer.
 }
 
 // Shape::Shape(const Shape &source) : origin(source.origin.getX(), source.origin.getY())
