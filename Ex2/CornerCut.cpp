@@ -46,23 +46,23 @@ void CornerCut::display()
     cout << "Radius of cut: " << Circle::getRadius() << endl;
 }
 
-CornerCut &CornerCut::operator=(const CornerCut &rhs)
-{
-    if (this == &rhs)
-    {
-        return *this;
-    }
-    else
-    {
-        delete[] this->shapeName;
-        int size = getSize(rhs.getName());
-        this->shapeName = new char[size + 1];
-        assert(this->shapeName != 0);
-        strcpy(this->shapeName, rhs.getName());
-        this->origin = rhs.getOrigin();
-        setSideA(rhs.getSideA());
-        setSideB(rhs.getSideA());
-        setRadius(rhs.getRadius());
-    }
-    return *this;
-}
+// CornerCut &CornerCut::operator=(const CornerCut &rhs)
+// {
+//     if (this == &rhs)
+//     {
+//         return *this;
+//     }
+//     else
+//     {
+//         delete[] this->shapeName;
+//         int size = getSize(rhs.getName());
+//         this->shapeName = new char[size + 1];
+//         assert(this->shapeName != 0);
+//         strcpy(this->shapeName, rhs.getName());
+//         this->origin = rhs.getOrigin();
+//         Square:: setSideA(rhs.getSideA());
+//         Rectangle::setSideB(rhs.getSideA());
+//         Circle::setRadius(rhs.getRadius());
+//     }
+//     return *this;
+// }

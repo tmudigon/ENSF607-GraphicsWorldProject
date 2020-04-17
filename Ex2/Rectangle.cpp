@@ -39,24 +39,24 @@ void Rectangle::display()
 }
 
 
-Rectangle &Rectangle::operator=(const Rectangle &rhs)
-{
-    // cout << "Assignment operator called!" << endl;
-    if (this == &rhs)
-    {
-        return *this;
-    }
-    else
-    {
-        delete[] this->shapeName;
-        int size = getSize(rhs.getName());
-        this->shapeName = new char[size + 1];
-        assert(this->shapeName != 0);
-        strcpy(this->shapeName, rhs.getName());
-        this->origin = rhs.getOrigin();
-        setSideA(rhs.getSideA());
-        setSideB(rhs.getSideB());
-    }
+// Rectangle &Rectangle::operator=(const Rectangle &rhs)
+// {
+//     // cout << "Assignment operator called!" << endl;
+//     if (this == &rhs)
+//     {
+//         return *this;
+//     }
+//     else
+//     {
+//         delete[] this->shapeName;
+//         int size = getSize(rhs.getName());
+//         this->shapeName = new char[size + 1];
+//         assert(this->shapeName != 0);
+//         strcpy(this->shapeName, rhs.getName());
+//         this->origin = rhs.getOrigin();
+//         Square::setSideA(rhs.getSideA());
+//         Rectangle::setSideB(rhs.getSideB());
+//     }
 
-    return *this;
-}
+//     return *this;
+// }

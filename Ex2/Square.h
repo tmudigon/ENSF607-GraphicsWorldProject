@@ -13,7 +13,7 @@ public:
     double getSideA() const;
     void setSideA(double value);
     void display();
-    Square &operator=(const Square &rhs);
+    // Square &operator=(const Square &rhs);
 
     //Need law of big 3?
 private:
