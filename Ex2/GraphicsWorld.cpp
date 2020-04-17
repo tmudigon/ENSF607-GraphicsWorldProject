@@ -46,7 +46,7 @@ void GraphicsWorld::run()
     s.display();
     cout << "the area of " << s.getName() << " is: " << s.area() << "\n";
     cout << "the perimeter of " << s.getName() << " is: " << s.perimeter() << "\n";
-    cout << "\n Testing copy constructor for Shape: " << endl;
+    cout << "\nTesting copy constructor for Shape: " << endl;
     Square s2(s);
 
     cout << "\ns sideA:" << s.getSideA();
