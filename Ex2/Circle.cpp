@@ -53,7 +53,7 @@ Circle &Circle::operator=(const Circle &rhs)
         strcpy(this->shapeName, rhs.getName());
 
         this->origin = rhs.getOrigin();
-        setRadius(rhs.getRadius());
+        Circle::setRadius(rhs.getRadius());
     }
 
     return *this;

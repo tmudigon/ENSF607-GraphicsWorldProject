@@ -33,7 +33,7 @@ double CornerCut::perimeter() const{
 //Reference:
 //https://stackoverflow.com/questions/137282/how-can-i-avoid-the-diamond-of-death-when-using-multiple-inheritance
 void CornerCut::display(){
-    cout << "CornerCut Name: " << endl;
+    cout << "CornerCut Name: ";
     Shape::display();
 }
 
@@ -52,4 +52,5 @@ CornerCut &CornerCut::operator=(const CornerCut &rhs){
         setSideB(rhs.getSideA());
         setRadius(rhs.getRadius());
     }
+    return *this;
 }
