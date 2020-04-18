@@ -16,7 +16,6 @@ public:
     // Circle &operator=(const Circle &rhs);  
 private:
     double radius;
-    // const double pi = 3.14159265358979323846;
 };
 
 #endif

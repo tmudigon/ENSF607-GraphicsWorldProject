@@ -46,6 +46,7 @@ void CornerCut::display()
     cout << "Radius of cut: " << Circle::getRadius() << endl;
 }
 
+//Override Shape assignment operator - not necessary
 // CornerCut &CornerCut::operator=(const CornerCut &rhs)
 // {
 //     if (this == &rhs)

@@ -15,7 +15,6 @@ public:
     void display();
     // Square &operator=(const Square &rhs);
 
-    //Need law of big 3?
 private:
     double sideA;
 };

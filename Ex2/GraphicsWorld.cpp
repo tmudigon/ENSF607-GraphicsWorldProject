@@ -111,7 +111,7 @@ void GraphicsWorld::run()
     cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter() << endl;
     sh[1]->display();
     cout << "\nthe area of " << sh[1]->getName() << " is: " << sh[1]->area();
-    cout << "\nthe perimeter of " << sh[0]->getName() << " is: " << sh[1]->perimeter();
+    cout << "\nthe perimeter of " << sh[1]->getName() << " is: " << sh[1]->perimeter()<<endl;
     sh[2]->display();
     cout << "\nthe area of " << sh[2]->getName() << " is: " << sh[2]->area();
     cout << "\nthe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter() << endl;
@@ -129,5 +129,4 @@ void GraphicsWorld::run()
     cc2.display();
     cout << "CC Radius: " << cc.getRadius() << endl;
     cout << "CC2 Radius: " << cc2.getRadius() << endl;
-    // ADD ADDITIONAL CODE TO TEST MORE FEATRUES, IF NEEDED
 }

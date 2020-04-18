@@ -5,10 +5,10 @@
 class Shape
 {
 public:
-    Shape(double x, double y, char *name); // must dynamically allocate memory for shapeName
+    Shape(double x, double y, char *name);      // must dynamically allocate memory for shapeName
     ~Shape();                                   //destructor
     Shape(const Shape &source);                 //copy constructor
-    virtual Shape &operator=(const Shape &rhs);         //asignment operator                             //Destroys memory allocation for shapeName
+    virtual Shape &operator=(const Shape &rhs); //asignment operator                             
     Point getOrigin() const;
     char *getName() const;
     virtual void display() const;

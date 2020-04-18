@@ -33,6 +33,7 @@ void Square::display(){
     Shape::display();
 }
 
+//Override Shape assignment operator - not necessary
 // Square &Square::operator=(const Square &rhs)
 // {
 //     // cout << "Assignment operator called!" << endl;

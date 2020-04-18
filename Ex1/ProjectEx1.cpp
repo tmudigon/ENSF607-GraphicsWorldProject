@@ -77,6 +77,7 @@ void Sun::print(){
 int main()
 {
     char c = 'D';
+    cout<<c;
     Sun sun(39, c);
     
     sun.print();

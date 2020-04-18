@@ -38,7 +38,7 @@ void Rectangle::display()
     Shape::display();
 }
 
-
+//Override Shape assignment operator - not necessary
 // Rectangle &Rectangle::operator=(const Rectangle &rhs)
 // {
 //     // cout << "Assignment operator called!" << endl;

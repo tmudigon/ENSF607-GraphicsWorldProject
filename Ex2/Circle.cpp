@@ -40,7 +40,7 @@ void Circle::display(){
     Shape::display();
 }
 
-
+//Override Shape assignment operator - not necessary
 // Circle &Circle::operator=(const Circle &rhs)
 // {
 //     // cout << "Assignment operator called!" << endl;

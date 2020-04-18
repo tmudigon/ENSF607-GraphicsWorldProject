@@ -12,7 +12,6 @@ public:
     double area() const;
     double perimeter() const;
     // CornerCut &operator=(const CornerCut &rhs);
-    // char* getName() const;
     void display();
 
 private:
